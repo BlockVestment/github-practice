@@ -78,12 +78,62 @@ git status OR git branch
 So this is where we are going to make updates to the branch we just created. Then we are going to add our changed files and commit them to our git history.
 
 1. Open up VSCode in our `github-practice` folder.
-2. 
+
+2. Check the status of by running the command `git status` to confirm you are on YOUR branch and not the MAIN branch.
+
+3. Open up the `README.md` file and add your name under the section entitled ### **I have completed these exercises** ###. After you add your name let's run the `git status` again.
 ```bash
-
+git status
 ```
-## Exercise 4 - Create a Pull Request
+You will now notice that your file will be highlighted red and say something that looks like this:
+```bash
+Changes not staged for commit:
+modified: README.md
+```
+> == PAUSE ==<br>
+> So you've modified the `README.md` and Git is giving you information: Changes staged for commit. This is telling you that you've made changes AND they have not been added yet.
+> <br>== UNPAUSE ==
+4. Let's go ahead and add the `README.md` file to our staged files (an intermediary place before we actually commit them to the Git history).
+```bash
+# Adds the specific file that has changed
+git add README.md
 
+# It will add all the changed files
+# This is the command I find myself running more often than not
+git add .
+```
+> == PAUSE ==<br>
+> So Git is a little strange because there is a two-part process to add modified files to the Git history:<br>
+> 1. Adding the files to a staged files state (aka a 'ready' state) **_not added to git history_<br>
+> 2. Commiting staged files to git history (aka a 'commit' state)
+> <br> == UNPAUSE ==<br>
+
+Let's run `git status` to see these two states:
+```bash
+# Checks the status (should be green) because we added our files to the 'ready'/'staged' state
+git status 
+```
+
+5. The next thing to do is commit our staged files to the git history.
+```bash
+# Commits the staged files to Git history & provide a message/comment about why/which files were changed
+git commit -m 'updated README.md'
+```
+You will see an output saying: <br>
+`1 file changed, <some number> additions, <some number> deletions.`<br>
+This is saying how many files changed and how many lines of code/changes were either added or removed.
+
+6. When we run `git status` one last time we can confirm that our changes were committed to the Git history.  If all goes well, you should see something like this:
+```bash
+On branch <name of your branch>
+noting to commit, working tree clean
+```
+
+## Exercise 4 - Create a Pull Request
+This last exercise you will push your updates to the `github-practice` repository, create a Pull Request, and finally merge your code into the main codebase.
+1. Open up VSCode in our `github-practice` folder.
+2. Run the command `git status` OR `git branch` to confirm you are on YOUR branch and not the MAIN branch.
+3. Run
 
 ## Putting it all together
 
