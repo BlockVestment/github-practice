@@ -58,16 +58,34 @@ This will be a relatively short exercise as we will be just creating and switchi
 > Although you can use `git branch` to create branches, I usually only use this command to see which branches I have locally on my machine.
 4. From here we want to create a new branch. So type the command `git checkout -b <name of our branch>`
 > == Pause == </br>
-> The `git checkout` command is a way to checkout different branches that we have locally. When we add the `-b` command, it is telling Git to: `Create our branch and check it out automatically.` </br>
+> The `git checkout` command is a way to switch to different branches that we have locally. When we add the `-b` command, it is telling Git to: **Create our branch and check it out automatically.** </br>
 > == Unpause ==
 5. From here, type `git status` or `git branch` to confirm we are actually on our newly created branch and NOT on our main branch.
 
 All together the commands should look like this (replace my branch name with whatever you like):
-```
+```bash
+# confirm the status of local changes
 git status
+# confirm which branch we are on
 git branch
+# create a new branch name alexs-branch and switch to it
 git checkout -b alexs-branch
+# verify the status of local changes or verify the status of which branch we are on
 git status OR git branch
 ```
+
 ## Exercise 3 - Make updates to your branch
+So this is where we are going to make updates to the branch we just created. Then we are going to add our changed files and commit them to our git history.
+
+1. Open up VSCode in our `github-practice` folder.
+2. 
+```bash
+
+```
 ## Exercise 4 - Create a Pull Request
+
+
+## Putting it all together
+
+
+# I have completed these exercises:
