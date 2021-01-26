@@ -133,9 +133,52 @@ noting to commit, working tree clean
 This last exercise you will push your updates to the `github-practice` repository, create a Pull Request, and finally merge your code into the main codebase.
 1. Open up VSCode in our `github-practice` folder.
 2. Run the command `git status` OR `git branch` to confirm you are on YOUR branch and not the MAIN branch.
-3. Run
+3. Next we are going to push our branch to GitHub
+```bash
+# Push our branch up to GitHub
+git push origin <your branch name>
 
-## Putting it all together
+# Example my branch was called `alexs-branch`
+git push origin alexs-branch
+```
+4. Navigate back to our Github repo: https://github.com/BlockVestment/github-practice
+5. You will see Github saying you recently pushed up your branch (should look like the image below)
+![Pushed branch](gh-branch.png "Title")
+6. Click the green button `Compare & Pull Request` and you'll see a screen where you can add a title & description of your pull request (this is general where you would put what features your code adds, or bugs it fixes, etc.).<br>
+It will also show you the differences between the **main branch** (which is our production codebase) and **your branch** (the feature/code you added)
+7. Fill out the Title & Description and click the `Create Pull Request` button. This will let people know that you've added code and ready for it to go into the **main branch**.
+8. Usually if it's complex or makes a changes to a lot of files the Pull Request process can take long time in the fact that someone has to review the code/features you wrote.
+9. Celebrate!
 
+
+## Putting it all together (TL/DR;)
+Okay so I know this is a lot to digest and hopefully I've explained it well enough. But ask questions if you get stuck, or don't understand something.
+
+I will quickly walkthrough my typical workflow for feature request / bugs.
+
+```bash
+# Pull down repo if I don't have it already
+git clone https://github.com/**/.git
+
+# Checkout a new branch
+git checkout -b <my branch name>
+
+# Modifiy code for the bug or feature request.
+# After I'm done with my modifications I double-check I didn't add any files I didn't intend to
+git status
+
+# Then I add all the changed files
+git add .
+
+# Commit to git history with a message
+git commit -m 'updated ___'
+
+# Push up my commits (git history) to Github
+git push origin <my branch name>
+
+
+# Finish by going on Github and making a Pull Request
+```
 
 # I have completed these exercises:
+Alexander Garcia
